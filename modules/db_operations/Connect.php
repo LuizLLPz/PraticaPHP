@@ -3,7 +3,7 @@
 //Class for returning a new PDO connection
 class Connect {
     
-    public static function create($info) {
+    public static function createConnection($info) {
         try {
         $conn = new PDO(
             $info['metodo'].

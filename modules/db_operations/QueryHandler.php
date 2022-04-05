@@ -12,7 +12,7 @@ class QueryHandler {
   public function selectValues($table) {
     $query = $this->pdo->prepare("SELECT * FROM {$table}");
     $query->execute();
-    return $query->fetchAll(PDO::FETCH_CLASS, 'Postagem'); 
+    return $query->fetchAll(PDO::FETCH_CLASS, "Post"); 
   }
 
   //Dynamically insert values in table

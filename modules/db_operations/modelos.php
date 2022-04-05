@@ -1,7 +1,7 @@
 <?php
 
-//Simple schema for database
-class Postagem {
+//Simple schema for mapping the columns fetched from the database
+class Post {
     public $titulo;
     public $texto;
     public $dia;
