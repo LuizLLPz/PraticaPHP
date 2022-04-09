@@ -17,14 +17,28 @@ class QueryHandler {
 
   //Dynamically insert values in table
   public function insertValues($table, $parameters) {
-    $sql = sprintf("Insert into %s VALUES (
-    DEFAULT, :%s)" , $table, 
-    implode(', :', array_keys($parameters)));
-    $val = array_keys($parameters);
-    echo(implode(', :', $val));
+    $sql = sprintf("Insert into %s VALUES(DEFAULT, ", $table);
+    $keys = array_keys($parameters);
+    $end = end($keys); 
+    foreach ($parameters as $key => $value) {
+       if ($value == 'DEFAULT') {
+         $sql .= $key != $end ? "DEFAULT, " : "DEFAULT)";
+       } else {
+         $sql .= $key != $end ? ":$key, " : ":$key)";
+       }
+    }
     $query = $this->pdo->prepare($sql);
-    $query->execute($parameters);
+    foreach ($parameters as $key => $value) {
+      if ($value == 'DEFAULT') {
+        continue;
+      } else {
+        $query->bindValue(":{$key}", $value);
+      }
+    }
+    $query->execute();
   }
+
+  
 
   //Select specific fields from table
   public function selectByField($table, $fields) {

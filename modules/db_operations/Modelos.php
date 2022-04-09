@@ -3,14 +3,17 @@
 //Simple schema for mapping the columns fetched from the database
 class Post {
     public $titulo;
-    public $texto;
+    public $corpo;
     public $dia;
-    public $usuario;
+    protected $created_at;
+    protected $updated_at;
+    protected $nome;
+    
 }
 
 class Usuario {
-    public $nome;
-    public $email;
-    public $senha;
+    protected $nome;
+    protected $email;
+    protected $senha;
 }
 

@@ -7,10 +7,17 @@
                 <?= $post->titulo ?>
             </h2>
             <p>
-                <?= $post->texto ?>
+                <?= $post->corpo ?>
             </p>
         </div>
         <?php endforeach; ?>
+    </div>
+    <div>
+        <form action="../praticaphp/api/post" method="POST">
+            <input type="text" name="titulo" placeholder="Título">
+            <input type="text" name="corpo" placeholder="Corpo">
+            <input type="submit" value="Enviar">
+        </form>
     </div>
 </body>
 </html>

@@ -13,5 +13,4 @@ $router->get(MAIN.'/registrar', '../views/registrar.php',);
 $router->get(MAIN.'/teste', '../views/teste.php',);
 $router->get('404', '../views/404.php',);
 
-
-$router->post('praticaphp/tarefas', '../pages/tarefas.php',);
+$router->post('praticaphp/api/post', '../views/api/post.php',);

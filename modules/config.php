@@ -10,7 +10,7 @@ if (!$env['PROD']) {
             'user' => $env['LOCAL_DB_USER'],
             'pwd' => $env['LOCAL_DB_PASS'],
             'options' => [
-                PDO::ATTR_ERRMODE => PDO::ERRMODE_WARNING,
+                PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
             ],
         ]
     ];
@@ -22,7 +22,7 @@ if (!$env['PROD']) {
             'user' => $env['DB_USER'],
             'pwd' => $env['DB_PASS'],
             'options' => [
-                PDO::ATTR_ERRMODE => PDO::ERRMODE_WARNING,
+                PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
                 PDO::MYSQL_ATTR_SSL_CA => '/etc/ssl/certs/ca-certificates.crt',
             ],
         ]

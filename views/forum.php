@@ -1,4 +1,5 @@
 <?php
+
 $args = [
     'nome' => 'Meu Fórum',
     'heading' => 'Fórum',
@@ -14,6 +15,8 @@ require '../components/metadata.php';
 <?php
 require '../components/header.php';
 $posts = $db_client->selectValues('Post');
-require '../pages/forum.php';
-?>
+$pdo = $db_client->getPDO();
 
+require '../pages/forum.php';
+
+?>
