@@ -1,13 +1,15 @@
 <?php
 //Arquivo para gerar padrões de rota para o sistema
-$router->get('praticaphp', '../views/index-map.php',);
-$router->get('praticaphp/forum', '../views/forum-map.php',);
-$router->get('praticaphp/sobre', '../views/sobre-map.php',);
-$router->get('praticaphp/contato', '../views/contato-map.php',);
-$router->get('praticaphp/login', '../views/login-map.php',);
-$router->get('praticaphp/registrar', '../views/registrar-map.php',);
-$router->get('praticaphp/teste', '../views/teste-map.php',);
+$i = 'praticaphp';
 
+$router->get($i, '../views/index.php',);
+$router->get($i.'/forum', '../views/forum.php',);
+$router->get($i.'/sobre', '../views/sobre.php',);
+$router->get($i.'/contato', '../views/contato.php',);
+$router->get($i.'/login', '../views/login.php',);
+$router->get($i.'/registrar', '../views/registrar.php',);
+$router->get($i.'/teste', '../views/teste.php',);
+$router->get('404', '../views/404.php',);
 
 
 $router->post('praticaphp/tarefas', '../pages/tarefas.php',);

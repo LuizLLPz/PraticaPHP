@@ -12,6 +12,3 @@
         </div>
 
     </div>
- <div class="header">
-         <h1><?php echo $args['heading'] ?></h1>
- </div>

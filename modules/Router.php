@@ -11,6 +11,7 @@ class Router {
     public function get($uri, $controller) {
         $this->routes['GET'][$uri] = $controller;
     }
+     
     //Novo método para adicionar rotas "POST"
     public function post($uri, $controller) {
         $this->routes['POST'][$uri] = $controller;
@@ -21,7 +22,7 @@ class Router {
         if (array_key_exists($uri, $this->routes[$method])) {
             return $this->routes[$method][$uri];
         } else {
-            throw new Exception("No route defined for this URI.");
+            return $this->routes['GET']['404'];
         }
     }
 

@@ -15,7 +15,7 @@ class Connect {
         return $conn;
         } 
         catch(PDOException $e) {
-            echo 'Error: ' . $e->getMessage();
+            echo 'Deu merda! ' . $e->getMessage();
         }}
      
 
