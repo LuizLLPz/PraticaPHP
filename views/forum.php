@@ -13,7 +13,7 @@ require '../components/metadata.php';
 
 <?php
 require '../components/header.php';
-$posts = $db->selectValues('Post');
+$posts = $db_client->selectValues('Post');
 require '../pages/forum.php';
 ?>
 

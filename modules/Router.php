@@ -2,7 +2,7 @@
 
 //Implementação da classe para roteamento
 class Router {
-    public $routes = [
+    protected $routes = [
         'GET' => [],
         'POST' => []
     ];
