@@ -2,7 +2,7 @@
 
 //Implementação da classe para roteamento
 class Router {
-    protected $routes = [
+    public $routes = [
         'GET' => [],
         'POST' => []
     ];
@@ -26,8 +26,4 @@ class Router {
         }
     }
 
-
-    public function getMethod() {
-        return $_SERVER['REQUEST_METHOD'];
-    }
 }

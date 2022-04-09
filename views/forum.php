@@ -14,7 +14,6 @@ require '../components/metadata.php';
 <?php
 require '../components/header.php';
 $posts = $db->selectValues('Post');
-echo json_encode($posts);
 require '../pages/forum.php';
 ?>
 

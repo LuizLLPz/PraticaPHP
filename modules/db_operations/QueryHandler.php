@@ -1,5 +1,5 @@
 <?php
-include 'modelos.php';
+include 'Modelos.php';
 
 class QueryHandler {
   protected $pdo;
